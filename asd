@@ -1,0 +1,1 @@
+miredite dhe preshendetjee
