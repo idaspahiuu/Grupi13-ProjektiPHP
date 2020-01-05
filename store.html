@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Objects...</title>
+    <script src="INTERNETI.js" async></script>
+   
+</head>
+<style>
+        * {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #8B008B;
+        }
+
+        img {
+            vertical-align: bottom;
+            width: 200px;
+            height: 200px;
+        }
+        nav{
+	 border-bottom: 2px groove #FAEBD7 ;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #5D4954;
+	font-family: Comic Sans MS;
+
+
+}.nav-links{
+	list-style: none;
+	display: inline-flex;
+	padding:0px;
+	justify-content: space-around;
+	width:30%;
+	float:right;
+}
+.nav-links a{
+	position: relative;
+	padding: 130%;
+	display: block;
+	color:#FAEBD7 ;
+	font-family:'Poppins', sans-serif ;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+	letter-spacing: 2px;
+	float: right;
+	align-items: right;
+}
+li a:hover {
+  background-color:	#D8BFD8;
+} 
+.logo{
+ 	width: 150px;
+ 	height: 160px;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-bottom: -20px;
+}
+ul li.active a
+{
+	background:#8B008B;
+	color:#FAEBD7 ;
+}
+
+
+        .grid-container {
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: 400px 400px 400px; /*Make the grid smaller than the container*/
+            grid-gap: 10px;
+            background-color: #8B008B;
+            padding: 10px;
+        }
+
+            .grid-container > div {
+                background-color: rgba(255, 255, 255, 0.8);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 20px;
+            }
+
+        .grid-container2 {
+            display: grid;
+            height: 1250px;
+            align-content: center;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            background-color: #8B008B;
+            padding: 10px;
+        }
+
+            .grid-container2 > div {
+                background-color: rgba(255, 255, 255, 0.8);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 20px;
+            }
+            #main{
+	margin: 20px;
+	background-color: orchid;
+	width: 97%;
+	height:80%;
+}
+
+        
+    </style>
+<div id="main">
+<body>
+    <nav id="main">
+  	<img class="logo"src="img/ida1.png">
+	<ul class="nav-links">
+		<li>
+			<a  href="homepage.html">Home</a>
+		</li>
+		<li>
+			<a class="active" href="store.html">Store</a>
+		</li>
+		<li >
+			<a href="links.html">Video</a>
+		</li>
+	</ul>  
+</nav>
+    
+    <div class="wrapper">
+
+        <div style="text-align: center">
+            <h1 style="color:blanchedalmond">Here's more from us...</h1>
+            <h2 style="color: blanchedalmond">Now you can buy our products online!</h2>
+        </div>
+
+    </div>
+
+
+    <section class="container content-section">
+        <div class="grid-container">
+            <div style="text-align:left">
+
+                <div class="shop-items">
+
+                    <div class="shop-item">
+
+                        <img class="shop-item-image" src="dog-backpack.jpg" height="200" />
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">50.00$</span>
+                            <button class="btn btn-primary shop-item-button"
+                                    type="button">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="shop-item">
+
+                    <img class="shop-item-image" src="GIR-notebook.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">2.00$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="shop-item">
+
+                    <img class="shop-item-image" src="bear-pencilcase.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">6.00$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shop-item">
+
+                    <img class="shop-item-image" src="NicksNight.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">26.00$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shop-item">
+
+                    <img class="shop-item-image" src="pencil-case4.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">2.50$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="text-align:center">
+                <div class="shop-item">
+
+                    <img class="shop-item-image" src="notebook2.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">2.00$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shop-item">
+
+                    <img class="shop-item-image" src="dog-bottle.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">2.00$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shop-item">
+
+                    <img class="shop-item-image" src="EverbodyHasSomethingToGive.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">22.00$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shop-item">
+
+                    <img class="shop-item-image" src="spiderman-backpack.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">39.00$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shop-item">
+
+                    <img class="shop-item-image" src="winniepooh-bottle.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">2.00$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="text-align:right">
+
+                <div class="shop-item">
+                    <img class="shop-item-image" src="pencil-case2.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">4.00$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <div class="shop-item">
+                    <img class="shop-item-image" src="Paddington1.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">20.00$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="shop-item">
+                    <img class="shop-item-image" src="friends-bottle.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">2.00$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shop-item">
+                    <img class="shop-item-image" src="ColoredPencils.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">3.50$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shop-item">
+                    <img class="shop-item-image" src="hop-on-pop.jpg" height="200" />
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">16.90$</span>
+                        <button class="btn btn-primary shop-item-button"
+                                type="button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        =====================================================================================================================================================================
+        <div style="text-align: left">
+            <h3 style="color: blanchedalmond">-----YOUR CART-----</h3>
+        </div>
+
+        <div style="text-align : left">
+            <div class="grid-container2">
+                <div class="cart-items">
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="dog-backpack.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">50.00$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="GIR-notebook.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">2.00$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button" text="bold">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="bear-pencilcase.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">6.00$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="NicksNight.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">26.00$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="pencil-case4.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">2.50$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center">
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="notebook2.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">2.00$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="dog-bottle.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">26.00$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="EverbodyHasSomethingToGive.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">22.00$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="spiderman-backpack.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">39.00$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="winniepooh-bottle.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">2.00$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div style="text-align : left">
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="pencil-case2.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">4.00$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="Paddington1.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">20.00$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="friends-bottle.jpg" width="50" height="50" />
+
+                        </div>
+                        <span class="cart-price cart-column">2.00$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="ColoredPencils.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">3.50$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-row">
+                        <div class="cart-items cart-column">
+                            <img class="cart-item-image" src="hop-on-pop.jpg" width="50" height="50" />
+                        </div>
+                        <span class="cart-price cart-column">16.90$</span>
+                        <div class="cart-quantity cart-column ">
+                            <input class="cart-quantity-input" type="number" value="1" />
+                            <button class="btn btn-danger "
+                                    type="button">
+                                REMOVE
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        ----------------------------------------------------------------------------
+        <div class="cart-total">
+            <strong class="cart-total-title" style="color: blanchedalmond">Total : </strong>
+            <span class="cart-total-price" style="color: blanchedalmond"> 199.90 </span>
+
+        </div>
+        <button class="btn btn-primary btn-purchase"
+                type="button">
+            PURCHASE
+        </button>
+    </section>
+</body>
+
+</div>
+ <script type="text/javascript">
+var currentTime = new Date().getHours();
+if (7 <= currentTime && currentTime < 20) {
+    if (document.body) {
+        document.body.background = "https://static.collectui.com/shots/3556242/dj-lubelski-large";
+    }
+}
+else {
+    if (document.body) {
+        document.body.background ="https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+    }
+}
+
+</script>
+</html>
