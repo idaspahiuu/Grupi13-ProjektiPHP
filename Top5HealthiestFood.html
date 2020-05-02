@@ -129,14 +129,16 @@
 var currentTime = new Date().getHours();
 if (7 <= currentTime && currentTime < 20) {
     if (document.body) {
-        document.body.background = "https://static.collectui.com/shots/3556242/dj-lubelski-large";
+        document.body.style.backgroundImage = "url('morning.jpg')";
     }
 }
 else {
     if (document.body) {
-        document.body.background ="https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+        document.body.style.background = "url('night.jpg')";
     }
 }
+
+</script>
 
 </script>
 </html>

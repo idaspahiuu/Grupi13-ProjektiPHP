@@ -5,9 +5,9 @@
 }
 body{
 	background-color: #8B008B;
-
-
+  opacity: 0.9;
 }
+
 nav{
 	 border-bottom: 2px groove #FAEBD7 ;
 	display: flex;
