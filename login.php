@@ -1,5 +1,7 @@
 <?php
-
+$username="";
+$email="";
+$error = array();
 
 $conn=mysqli_connect("localhost", "root", "", "Users");
 if(!$conn)
@@ -36,5 +38,38 @@ if ($conn->query($sql) === TRUE) {
 }
 
 mysqli_close($conn);*/
+
+	if(isset($_POST['register']))
+	{
+		$username = mysql_real_escape_string($_POST['username']);
+		$email = mysql_real_escape_string($_POST['email']);
+		$email = mysql_real_escape_string($_POST['[Password]']);
+		$email = mysql_real_escape_string($_POST['Password1']);
+
+	}
+
+	if(empty($username))
+	{
+		array_push($error, "Username is required!");
+	}
+	if(empty($email))
+	{
+		array_push($error, "Email is required!");
+	}
+	if(empty($Password))
+	{
+		array_push($error, "Password is required!");
+	}
+	if($Password != $Password1)
+	{
+		array_push($error, "Passwords do not match!");
+	}
+
+	if(count($error)==0)
+	{
+		$password_1 = md5($password);
+		$sql = "INSERT INTO myUsers (username, email, password) VALUES ($username, $email, $password_1)";
+		mysqli_query($conn, $sql);
+	}
 
 ?>

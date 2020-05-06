@@ -1,0 +1,63 @@
+
+button {
+  background-color: #F0F8FF;
+  color: #483D8B;
+  padding: 14px 20px;
+  margin: 15px 40px;
+  cursor: pointer;
+  width: 300px;
+  border-radius: 12px;
+  border-color:#483D8B;
+}
+button:hover {
+  opacity: 0.8;
+}
+a:hover{
+	opacity: 0.8;
+}
+@font-family{
+	font-family: myFirstFont;
+  src: url(Bombtrack Demo.ttf);
+}
+div{
+	font-family: myFirstFont;
+}
+.input-icons i { 
+  position: absolute; 
+  padding: 14px 20px; 
+
+} 
+          
+.input-icons { 
+  width: 100%; 
+  margin-bottom: 10px; 
+  padding:20px; 
+} 
+          
+.icon { 
+	padding: 10px; 
+	color: plum; 
+	min-width: 50px; 
+	text-align: center;
+} 
+          
+.input-field { 
+ width: 300px; 
+ padding: 10px; 
+text-align: center;
+ margin: 6px;
+ border-radius: 12px;
+} 
+.value{
+	color:#D3D3D3;
+}
+.error{
+	width: 92%;
+	margin: 0px auto;
+	padding: 8px;
+	border: 1px solid #a94442;
+	color: #a94442;
+	background: #f2dede;
+	border-radius: 5px;
+	text-align: left;
+}
