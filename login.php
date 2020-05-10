@@ -1,75 +1,56 @@
-<?php
-$username="";
-$email="";
-$error = array();
+<?php include('db1.php'); ?>
+<!DOCTYPE html>
+<html>
 
-$conn=mysqli_connect("localhost", "root", "", "Users");
-if(!$conn)
-{
-	die("Konektimi ka deshtuar!". mysqli_connect_error());
+<link rel="stylesheet" type="text/css" href="login.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<title>Log In</title>
+</head>
 
+<body>
+	<table>
+		<tr><td>
+	<form method="post" action="db1.php">
+		
+
+		<fieldset style="width:400px; background-image: url(signup.jpg); opacity:0.9 ;border-width:1px; border-color: #483D8B; border-radius: 12px; margin:15%;" > <legend style="color: white; font-family:Lucida Handwriting; text-shadow: 3px 2px #483D8B;"><h2>Sign Up</h2></legend>
+			<?php include('errors.php'); ?>
+		<div class="input-icons">
+		
+		<i class="fa fa-envelope icon"></i> 
+		<input class="input-field " type="text" name="email" placeholder="Email" id="email" value="<?php echo $email ?>"></br>
+
+		<i class="fa fa-key icon" aria-hidden="true"></i>
+		<input class="input-field " type="password" name="Password" id="Password" placeholder="Password"></br>
+
+	</div>
+		<button type="submit" id="register" name="register" style=" font-weight: bolder;">Log In</button></br></br>
+		<a style="border:1px #483D8B; font-weight: bold; border-radius: 10px; text-decoration: none; background-color:#F0F8FF; padding:6px; color: #483D8B" href="Register.php"> Sign Up </a> &nbsp;<span style="color:#D3D3D3"> if you don't have an account.</span>
+
+	</fieldset>
+	</form>
+</td>
+<td></td>
+<td></td>
+<td><img src="welcome.png" style="padding:200px; align-content: left"></img></td>
+	</tr>
+	</table>
+
+</body>
+
+<script type="text/javascript">
+var currentTime = new Date().getHours();
+if (7 <= currentTime && currentTime < 20) {
+    if (document.body) {
+        document.body.style.backgroundImage = "url('images.jpg')";
+    }
 }
-	
-//Krijimi i databazes users
-/*
-$sql = "CREATE DATABASE Users";
-if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully";
-} else {
-    echo "Error creating database: " . $conn->error;
+else {
+    if (document.body) {
+        document.body.style.background = "url('images.jpg')";
+    }
 }
 
-mysqli_close($conn);
-*/
-
-//Krijimi i tabeles myusers
-/*$sql = "CREATE TABLE myUsers(
-ID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-username VARCHAR(50) NOT NULL,
-email VARCHAR(100) NOT NULL,
-password VARCHAR(50) NOT NULL,
-reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-)";
-
-if ($conn->query($sql) === TRUE) {
-    echo "TABLE created successfully";
-} else {
-    echo "Error creating database: " . $conn->error;
-}
-
-mysqli_close($conn);*/
-
-	if(isset($_POST['register']))
-	{
-		$username = mysql_real_escape_string($_POST['username']);
-		$email = mysql_real_escape_string($_POST['email']);
-		$email = mysql_real_escape_string($_POST['[Password]']);
-		$email = mysql_real_escape_string($_POST['Password1']);
-
-	}
-
-	if(empty($username))
-	{
-		array_push($error, "Username is required!");
-	}
-	if(empty($email))
-	{
-		array_push($error, "Email is required!");
-	}
-	if(empty($Password))
-	{
-		array_push($error, "Password is required!");
-	}
-	if($Password != $Password1)
-	{
-		array_push($error, "Passwords do not match!");
-	}
-
-	if(count($error)==0)
-	{
-		$password_1 = md5($password);
-		$sql = "INSERT INTO myUsers (username, email, password) VALUES ($username, $email, $password_1)";
-		mysqli_query($conn, $sql);
-	}
-
-?>
+</script>
+</html>

@@ -1,3 +1,22 @@
+<?php
+
+	$conn=mysqli_connect("localhost", "root", "", "Users");
+	if(!$conn)
+	{
+	die("Konektimi ka deshtuar!". mysqli_connect_error());
+
+	}
+	mysql_select_db(Users);
+	if(isset($_POST['Log In']))
+	{
+		$username = mysql_real_escape_string($_POST['username']);
+		$email = mysql_real_escape_string($_POST['email']);
+		$email = mysql_real_escape_string($_POST['[Password]']);
+		$email = mysql_real_escape_string($_POST['Password1']);
+
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <?php include('db.php');?>
@@ -10,15 +29,12 @@
 <body>
 	<table>
 		<tr><td>
-	<form method="post" action="Register.php">
+	<form method="post" action="LogIn.php">
 		
 
 		<fieldset style="width:400px; background-image: url(signup.jpg); opacity:0.9 ;border-width:1px; border-color: #483D8B; border-radius: 12px; margin:15%;" > <legend style="color: white; font-family:Lucida Handwriting; text-shadow: 3px 2px #483D8B;"><h2>Sign Up</h2></legend>
 			<?php include('errors.php'); ?>
 		<div class="input-icons">
-
-		<i class="fa fa-user icon"></i> 
-		<input class="input-field " type="text" name="username" placeholder="Username" id="username" value="<?php echo $username ?>"></form></br>
 		
 		<i class="fa fa-envelope icon"></i> 
 		<input class="input-field " type="text" name="email" placeholder="Email" id="email" value="<?php echo $email ?>"></br>
@@ -26,11 +42,9 @@
 		<i class="fa fa-key icon" aria-hidden="true"></i>
 		<input class="input-field " type="password" name="Password" id="Password" placeholder="Password"></br>
 
-		<i class="fa fa-key icon" aria-hidden="true"></i>
-		<input class="input-field " type="password" name="Password1" id="Password1"  placeholder="Confirm password"></br>
 	</div>
-		<button type="submit" id="register" name="register" style=" font-weight: bolder;">Sign Up</button></br></br>
-		<a style="border:1px #483D8B; font-weight: bold; border-radius: 10px; text-decoration: none; background-color:#F0F8FF; padding:6px; color: #483D8B" href="LogIn.php"> Log In </a> &nbsp;<span style="color:#D3D3D3"> if you already have an account.</span>
+		<button type="submit" id="register" name="register" style=" font-weight: bolder;">Log In</button></br></br>
+		<a style="border:1px #483D8B; font-weight: bold; border-radius: 10px; text-decoration: none; background-color:#F0F8FF; padding:6px; color: #483D8B" href="Register.php"> Sign Up </a> &nbsp;<span style="color:#D3D3D3"> if you don't have an account.</span>
 
 	</fieldset>
 	</form>

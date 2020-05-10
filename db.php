@@ -5,7 +5,7 @@ $Password="";
 $Password1="";
 $error = array();
 
-$conn=mysqli_connect("localhost", "root", "", "Users");
+$conn=mysqli_connect("localhost", "root", "", "users");
 if(!$conn)
 {
 	die("Konektimi ka deshtuar!". mysqli_connect_error());
@@ -40,6 +40,8 @@ if ($conn->query($sql) === TRUE) {
 }
 
 mysqli_close($conn);*/
+if(empty($_SESSION))
+	session_start();
 
 	if(isset($_POST['register']))
 	{
@@ -48,14 +50,23 @@ mysqli_close($conn);*/
 		$Password = $_POST['Password'];
 		$Password1 = $_POST['Password1'];	
 
+
 	if(empty($username))
 	{
 		array_push($error, "Username is required!");
 	}
+	else if(!preg_match("/^[a-zA-Z ]*$/",$username)) {
+      array_push($error, "Only letters and white space allowed in username!");
+	}
+
 	if(empty($email))
 	{
 		array_push($error, "Email is required!");
 	}
+	else if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    	array_push($error, "Invalid email format!");
+    }
+	
 	if(empty($Password))
 	{
 		array_push($error, "Password is required!");
@@ -68,10 +79,38 @@ mysqli_close($conn);*/
 	if(count($error)==0)
 	{
 		$password_1 = md5($Password);
-		$sql = "INSERT INTO myusers (username, email, password) VALUES ($username, $email, $password_1)";
-		mysqli_query($conn, $sql);
+		$sql = "INSERT INTO myusers (username, email, password) VALUES ('$username', '$email', '$password_1')";
+
+		$sql1 ="SELECT ID FROM myusers WHERE email= '".$email."' ";
+
+			$p = mysqli_query($conn, $sql1);	
+			$num = mysqli_num_rows($p);
+    		if($num > 1)
+    		{
+
+	    		array_push($error, "This email is already used!");
+	    	}
+    		else
+    		 {
+    		 	$conn->query($sql);
+    		    $_SESSION['valid_user'] = $email;
+    		    if(isset($_SESSION['valid_user']))
+				    {
+				    	header('location: homepage.php');
+				    }
+
+    			
+    		}
+
+	
+
 	}
-	}
+	
+}
+	
+	    $conn->close();
+
+
 
 
 ?>
