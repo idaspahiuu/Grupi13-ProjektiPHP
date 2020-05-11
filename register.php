@@ -42,6 +42,24 @@
 	</table>
 
 </body>
+<footer>
+	<table align="right" width="80%" cellspacing="10px">
+		<tr>
+			<div class="link">
+			<td ><a style="text-decoration: none; padding: 10px; color: #808080;" href="#">ABOUT</a></td>
+			<td><a style="text-decoration: none; padding: 10px; color: #808080;" href="#">HELP</a></td>
+			<td><a style="text-decoration: none; padding: 10px; color: #808080;" href="#">PRIVACY</a></td>
+			<td><a style="text-decoration: none; padding: 10px; color: #808080;" href="#">LOCATIONS</a></td>
+			<td><a style="text-decoration: none; padding: 10px; color: #808080;" href="#">LANGUAGE</a></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td style="color:"#DCDCDC" ">&#9400; ABCLearn 2020</td>
+
+		</tr>
+	</table>
+</footer>
 
 <script type="text/javascript">
 var currentTime = new Date().getHours();

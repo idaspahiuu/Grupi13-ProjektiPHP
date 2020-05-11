@@ -75,6 +75,10 @@ if(empty($_SESSION))
 	{
 		array_push($error, "Passwords do not match!");
 	}
+	if(strlen($Password)<8)
+	{
+		array_push($error, " Password must be at least 8 characters in length!");	
+	}
 
 	if(count($error)==0)
 	{
@@ -109,8 +113,6 @@ if(empty($_SESSION))
 }
 	
 	    $conn->close();
-
-
 
 
 ?>

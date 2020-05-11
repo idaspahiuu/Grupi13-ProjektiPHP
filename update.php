@@ -1,50 +1,44 @@
-<?php include('db1.php'); ?>
+<?php include('db3.php'); ?>
 <!DOCTYPE html>
 <html>
-<style type="text/css">
-.link{
-	text-decoration: none;
-	padding: 10px;
-	color: #808080;
-}
-</style>
-
 <link rel="stylesheet" type="text/css" href="login.css" >
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
-<title>Log In</title>
+<title>Change password</title>
 </head>
 
 <body>
-	<table>
-		<tr><td>
-	<form method="post" action="LogIn.php">
+		<form method="post" action="update.php">
 		
 
-		<fieldset style="width:400px; background-image: url(signup.jpg); opacity:0.9 ;border-width:1px; border-color: #483D8B; border-radius: 12px; margin:15%;" > <legend style="color: white; font-family:Lucida Handwriting; text-shadow: 3px 2px #483D8B;"><h2>Log In</h2></legend>
+		<fieldset style="width:400px; background-color: #FFFFF0; opacity:0.9 ;border-width:1px; border-color: #483D8B; border-radius: 12px; margin-left:550px; margin-top: 200px;" > <legend style="color: white; font-family:Lucida Handwriting; text-shadow: 3px 2px #483D8B;"></legend>
 			<?php include('errors.php'); ?>
+			<h2 style="color:#483D8B;">Change password</h2>
 		<div class="input-icons">
 		
 		<i class="fa fa-envelope icon"></i> 
 		<input class="input-field " type="email" name="email" placeholder="Email" id="email" value="<?php echo $email ?>"></br>
 
 		<i class="fa fa-key icon" aria-hidden="true"></i>
-		<input class="input-field " type="password" name="Password" id="Password" placeholder="Password"></br>
+		<input class="input-field " type="password" name="Password" id="Password" placeholder="New password"></br>
+
+		<i class="fa fa-key icon" aria-hidden="true"></i>
+		<input class="input-field " type="password" name="Password1" id="Password1" placeholder="Confirm new password"></br>
 
 	</div>
-		<button type="submit" id="register" name="register" style=" font-weight: bolder;">Log In</button></br></br>
-		<a style="border:1px #483D8B; font-weight: bold; border-radius: 10px; text-decoration: none; background-color:#F0F8FF; padding:6px; color: #483D8B" href="Register.php"> Sign Up </a> &nbsp;<span style="color:#D3D3D3"> if you don't have an account.</span>
-
+		<button type="submit" id="Change" name="Change" style=" font-weight: bolder;">Change</button></br></br>
+		<a style=" font-weight: bold; text-decoration: none; color: #483D8B" href="Homepage.php"> Go back </a> 
 	</fieldset>
 	</form>
-</td>
-<td></td>
-<td></td>
-<td><img src="welcome.png" style="padding:200px; align-content: left"></img></td>
-	</tr>
-	</table >
+
 
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <footer>
 	<table align="right" width="80%" cellspacing="10px">
 		<tr>

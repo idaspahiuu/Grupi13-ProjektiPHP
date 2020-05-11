@@ -3,8 +3,49 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>DetyraInternet</title>
+	<title>Homepage</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
+  <style>
+.dropbtn {
+  background-color: #8B008B;
+  color: white;
+  padding: 16px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #9932CC;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #4a4141;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #f1f1f1;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
 </head>
 <div id="main">
 <body>
@@ -21,7 +62,14 @@
 			<a href="links.html">Video</a>
 		</li>
 	</ul> 
-  <a href="logout.php" style="text-decoration: none; border: solid 1px plum; color:plum; background-color: white; border-radius: 8px; padding: 5px;">Logout</a> 
+  <div class="dropdown">
+  <button onclick="myFunction1()" class="dropbtn">&#9776;</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="update.php">Change password</a>
+    <a href="delete.php">Delete account</a>
+    <a href="logout.php">Logout</a>
+  </div>
+</div>
 </nav>
 <p>
   "Children are great imitators, so give them something great to imitate."
@@ -268,7 +316,31 @@ function showSlides(n) {
     </td>
   </tr>
   
-</table>  
+</table>
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction1() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
 
 <script type="text/javascript">
 var currentTime = new Date().getHours();

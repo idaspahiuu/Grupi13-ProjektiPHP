@@ -30,22 +30,40 @@ $password = stripcslashes($password);
 	}
 	if(empty($password)){
 
-		array_push($error, "Email is required!");
+		array_push($error, "Password is required!");
+	}
+	if(strlen($password)<8)
+	{
+		array_push($error, "Password must be at least 8 characters in length!");
 	}
 
-	$query = "select * from myusers where email = '".$email." ' and password = '".md5($password). " ' ";
+	$query = "select * from myusers where email = ? and password = md5(?) ";
+	$stmt = mysqli_prepare($conn, $query);
+	mysqli_stmt_bind_param($stmt, "ss",$email, $password);
+	mysqli_stmt_execute($stmt);
+	$rezultati = mysqli_stmt_get_result($stmt);
 
-	$rezultati = mysqli_query($conn, $query );
+	if(!$rezultati)
+	{
+		array_push($error, "Action denied!");
+	}
 
-	 if(mysqli_num_rows($rezultati)>0)
+	 elseif(mysqli_num_rows($rezultati)>0)
 	{
         // Nëse ekziston shfrytëzuesi në db (tabelën authorized_users)
         $_SESSION['valid_user'] = $email;
+
     }
-    if(isset($_SESSION['valid_user']))
+
+    elseif(isset($_SESSION['valid_user']))
     {
     	header('location: homepage.php');
     }
+    else
+    {
+   		array_push($error, "Wrong email or password!");
+    }
+
 
     
 }
