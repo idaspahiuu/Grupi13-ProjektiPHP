@@ -100,8 +100,15 @@ if(empty($_SESSION))
     		    $_SESSION['valid_user'] = $email;
     		    if(isset($_SESSION['valid_user']))
 				    {
-				    	header('location: homepage.php');
-				    }
+				    	if(file_exists("homepage.php"))
+				        {
+						  $file = fopen("homepage.php", "r");
+						} 
+						else
+						{
+						  die("Error: The file does not exist.");
+						}
+					 }
 
     			
     		}
@@ -111,8 +118,7 @@ if(empty($_SESSION))
 	}
 	
 }
-	
-	    $conn->close();
+ $conn->close();
 
 
 ?>

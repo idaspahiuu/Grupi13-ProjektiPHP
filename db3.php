@@ -1,5 +1,6 @@
 <?php
 
+
 $email="";
 $Password="";
 $Password1="";
@@ -15,6 +16,7 @@ if(!$conn)
 
 if(empty($_SESSION))
 	session_start();
+
 
 
 if(isset($_POST['Change']))
@@ -54,10 +56,11 @@ $Password1= stripcslashes($Password1);
 
 	if(count($error)==0)
 	{
-		$query = "SELECT * FROM myusers WHERE email = '".$email."' ";
+		$_SESSION['valid_user']=$email;
+		$query = "SELECT * FROM myusers WHERE email = '".$_SESSION['valid_user']."' ";
 		if(mysqli_query($conn, $query))
 		{
-			$sql = "UPDATE myusers SET password='".md5($Password)."' WHERE 	email ='".$email."' ";
+			$sql = "UPDATE myusers SET password='".md5($Password)."' WHERE 	email ='".$_SESSION['valid_user']."' ";
 			if(mysqli_num_rows(mysqli_query($conn, $query)) > 0)
 			{
 				if (mysqli_query($conn, $sql))
@@ -68,7 +71,7 @@ $Password1= stripcslashes($Password1);
 			}
 			else
 			{
-				echo "Failed to update password!<br>";
+				trigger_error("Failed to update password!".'<br>');
 				echo '<a href="LogIn.php">Go back</a>';
 			}
 		}

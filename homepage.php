@@ -154,19 +154,35 @@
 </table>
 <table style="display: inline-block; float right; column-span: 3;">
   <tr>
-    <th>Reviews</th>
+    <th>Reviews<br>
+      <img style="width:200px; height:100px;" src="1.png"></th>
    <tr >
-      <td ><img class="photo2" src="img/anna.jpg"><strong> Anna</strong><br>
-      This page is very helpful for my kids,I love it <3333</td>
-    </tr> <tr >
-      <td ><img class="photo2" src="img/ida12.jpg"><strong> John</strong><br>
-      You guys are doing a great job! </td>
-    </tr>
-    <tr>
-  <td><img class="photo2" src="img/sam.jpg"><strong> Sam</strong><br>
-     I think you can do better...
-      <a style="text-decoration: none; color:purple;background-color:#FFB6C1;border: 1px groove transparent; border-radius: 5px;" href="review.html"> View all reviews</a></td></tr>
+      <td >
+        <div id="poll">
+<h3>Do you like PHP and AJAX so far?</h3>
+<form>
+Yes: <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
+No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+</form>
+</div>
+      </td>
+
+  <tr>
+    
+
+    <td><a href="rate.php"><img style="width: 30px; height: 30px;" src="star2.png"></a>
+      <a href="rate.php">Check this and rate us!</a>
+    </td>
+    
+  </tr>
+
+</tr>
+<tr><td>&nbsp;</td></tr>
+    <tr><td>&nbsp;</td></tr>
+    <tr><td>&nbsp;</td></tr>
+
 </table>
+
 
 <script>
 var slideIndex = 1;
@@ -341,6 +357,18 @@ window.onclick = function(event) {
 }
 </script>
 
+<script>
+function getVote(int) {
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("poll").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+  xmlhttp.send();
+}
+</script>
 
 <script type="text/javascript">
 var currentTime = new Date().getHours();

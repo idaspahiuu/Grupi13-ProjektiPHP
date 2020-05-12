@@ -1,6 +1,5 @@
 <?php 
 session_start();
-// testojme nese user ka qene i loguar
 $loggedin_user = $_SESSION['valid_user'];
 unset($_SESSION['valid_user']);
 session_destroy();
