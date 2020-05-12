@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Fruits and Vegetables</title>
+    <style>
+        body {
+            background-color: #8B008B;
+        }
+
+        h2 {
+            font-family: lucida handwriting;
+            color: #FAEBD7;
+            text-align: center;
+        }
+
+        div {
+            margin: 50px 15px 50px 60px;
+            background-color: orchid;
+            width: 90%;
+            height: 80%;
+            border: 1px groove;
+            border-color: transparent;
+        }
+
+
+        .logo {
+            width: 150px;
+            height: 160px;
+            overflow: hidden;
+            margin-top: 0px;
+            margin-bottom: -20px;
+            box-shadow: none;
+            border: none;
+        }
+
+        table {
+            width: 100%;
+            padding: 50px;
+            padding-left: 150px;
+            text-align: center;
+            color: pink;
+            font-family: Sans, cursive;
+            font-size: 30px;
+        }
+
+        img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+            height: 150px;
+            box-shadow: 0px 0px 6px 3px pink;
+            margin-left: 15px;
+        }
+
+            img:hover {
+                box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+            }
+
+        #main {
+            padding: 5px;
+            background-color: darkorchid;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table cellpadding="10px">
+            <tr id="main">
+                <tr id="main">
+                <td style="font-size: 16px;">
+                    <a target="_blank" href="fv/potato.jpg">
+                        <img src="fv/potato.jpg" alt="Potato">
+                    </a>
+                </td>
+			</tr>
+        </table>
+    </div>
+</body>
+
+<script type="text/javascript">
+var currentTime = new Date().getHours();
+if (7 <= currentTime && currentTime < 20) {
+    if (document.body) {
+        document.body.style.backgroundImage = "url('morningg.jpg')";
+    }
+}
+else {
+    if (document.body) {
+        document.body.style.background = "url('night.jpg')";
+    }
+}
+</script>
+</html>
