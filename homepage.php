@@ -1,51 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Homepage</title>
+	<title>DetyraInternet</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
-  <style>
-.dropbtn {
-  background-color: #8B008B;
-  color: white;
-  padding: 16px;
-  font-size: 24px;
-  border: none;
-  cursor: pointer;
-
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #9932CC;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #4a4141;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: #f1f1f1;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-</style>
 </head>
 <div id="main">
 <body>
@@ -62,14 +20,7 @@
 			<a href="links.html">Video</a>
 		</li>
 	</ul> 
-  <div class="dropdown">
-  <button onclick="myFunction1()" class="dropbtn">&#9776;</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="update.php">Change password</a>
-    <a href="delete.php">Delete account</a>
-    <a href="logout.php">Logout</a>
-  </div>
-</div>
+  <a href="logout.php" style="text-decoration: none; border: solid 1px plum; color:plum; background-color: white; border-radius: 8px; padding: 5px;">Logout</a> 
 </nav>
 <p>
   "Children are great imitators, so give them something great to imitate."
@@ -298,7 +249,7 @@ function showSlides(n) {
 <table style="display: inline-block;">
   <tr>
     <td><div class="p1">About You</div>
-      <form action="demo_form.asp">
+      <form enctype='multipart/form-data' method='post'>
         <br>
         Name: <br>
         <input style="width:170px; background-color: pink;" type="text" name="fname" placeholder="First name" required><br>
@@ -306,7 +257,7 @@ function showSlides(n) {
         <input style="width:170px; background-color: pink;" type="text" name="lname" placeholder="Last name" required><br>
         Write something about yourself:<br>
          <input style="width:170px; height: 100px; background-color: pink;" type="text" name="about" placeholder="Write here" required><br>
-         <input style="width: 100px; float: right;" type="submit" value="Submit">
+         <input style="width: 100px; float: right;" type="submit" value="Submit" >
 
 
       
@@ -316,31 +267,7 @@ function showSlides(n) {
     </td>
   </tr>
   
-</table>
-
-
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction1() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-
+</table>  
 
 <script type="text/javascript">
 var currentTime = new Date().getHours();
@@ -378,3 +305,24 @@ function myFunction() {
 
 </footer>
 </html>
+
+
+<?php
+if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['about']))
+{  
+	$teksti1 = $_POST['fname'] . "\n";
+	$teksti2 = $_POST['lname'] . "\n";
+	$teksti3 = $_POST['about'] . "\n";
+	$filename = "info.txt"; 
+	$file = fopen($filename, "w" );
+	if($file == false )
+	{
+		echo ( "Error in opening new file" );
+		exit();
+	}
+	fwrite( $file, $teksti1);
+	fwrite( $file, $teksti2);
+	fwrite( $file, $teksti3);
+	fclose( $file );
+}
+?>
