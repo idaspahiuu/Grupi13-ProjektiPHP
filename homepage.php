@@ -1,11 +1,42 @@
+<?php
+if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['about']))
+{  
+	$teksti1 = trim($_POST['fname']) . " ";
+	$teksti2 = trim($_POST['lname']) . "\n";
+	$teksti3 = trim($_POST['about']) . "\n";
+	$filename = "Linda\info.txt"; 
+	$file = fopen($filename, "w" );
+	if($file == false )
+	{
+		print( "Error in opening new file" );
+		exit();
+	}
+	fwrite( $file, $teksti1);
+	fwrite( $file, $teksti2);
+	fwrite( $file, $teksti3);
+	fclose( $file );
+}
+?>
+<?php
 
+session_start();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Homepage</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homepage</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+body{
+  background-color: #8B008B;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .dropbtn {
   background-color: #8B008B;
   color: white;
@@ -47,13 +78,12 @@
 .show {display: block;}
 </style>
 </head>
-<div id="main">
 <body>
 <nav id="main">
   	<img class="logo"src="img/ida1.png">
 	<ul class="nav-links">
 		<li class="active">
-			<a  href="homepage.html">Home</a>
+			<a  href="homepage.php">Home</a>
 		</li>
 		<li>
 			<a href="store.html">Store</a>
@@ -72,6 +102,7 @@
 </div>
 </nav>
 <p>
+  <br>
   "Children are great imitators, so give them something great to imitate."
 </p>
 <br>
@@ -112,11 +143,15 @@
   <span class="dot" onclick="currentSlide(3)"></span> 
   <span class="dot" onclick="currentSlide(4)"></span> 
 </div>
+<br>
 
+<div style="border:solid 3px #FAEBD7; border-radius: 4px; background-image: url('i.jpg');background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
 <table style="display: inline-block; float left; width:25%;">
   <tr>
     <th>About abcLearning</th>
-    <tr >
+    <tr >s
       <td ><iframe class="photo" src="https://www.youtube.com/embed/DCWv-Zu-M7w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <br>
         AbcLearning is a global education initiative of Age of Learning
@@ -158,20 +193,23 @@
       <img style="width:200px; height:100px;" src="1.png"></th>
    <tr >
       <td >
+        <div style="border:solid 1px; border-radius: 8px; padding: 10px">
         <div id="poll">
-<h3>Do you like PHP and AJAX so far?</h3>
+<h3>Do you like our website?</h3>
 <form>
 Yes: <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
 No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
 </form>
+</div>
 </div>
       </td>
 
   <tr>
     
 
-    <td><a href="rate.php"><img style="width: 30px; height: 30px;" src="star2.png"></a>
-      <a href="rate.php">Check this and rate us!</a>
+    <td><div style="border:1px #483D8B; font-weight: bold; border-radius: 10px;  background-color:#F0F8FF; padding:6px; color: #483D8B"><a  href="rate.php"><img style="width: 30px; height: 30px;" src="star2.png"></a>
+      <a style="text-decoration: none;href="rate.php">Check this and rate us!</a>
+    </div>
     </td>
     
   </tr>
@@ -182,7 +220,14 @@ No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
     <tr><td>&nbsp;</td></tr>
 
 </table>
-
+<table style="display: inline-block;">
+  <tr>
+    <td>
+      <img style="width:150px;" src="123.png">
+    </td>
+  </tr>
+</table>
+</div>
 
 <script>
 var slideIndex = 1;
@@ -215,7 +260,6 @@ function showSlides(n) {
 
 
 </body>
-</div>
 <footer>
 
   <table style="display: inline-block; width:25%; margin-bottom: 60px;">
@@ -236,6 +280,7 @@ function showSlides(n) {
     	</br>
     	</br>
     </br>
+    <button style="font-size:15px; color: #00acee; border:solid 1px white; background-color: white; border-radius: 5px;"> <i class="fa fa-twitter"></i><a style="text-decoration: none; font-weight: bold; color: #00acee" href="api.php">Check our tweets</a></button>
 <br>
 </td></tr>
 </table>
@@ -247,19 +292,19 @@ function showSlides(n) {
   <tr>
     <th class="p1">You can also find us on</th>
     <tr >
-      <td class="p2"><a style="color:  #C0C0C0; text-decoration: none; font-weight: bold;" href="https://www.facebook.com/kidsacademyks/"><img class="photo3" src="img/ida13.png" alt="Facebook"> Facebook</a>
+      <td class="p2"><a style="color:  white; text-decoration: none; font-weight: bold;" href="https://www.facebook.com/kidsacademyks/"><img class="photo3" src="facebook-logo.png" alt="Facebook"> Facebook</a>
       </td>
     </tr>
      <tr >
       <td class="p2">
-      <a style="color:  #C0C0C0; text-decoration: none; font-weight: bold;" href="https://instagram.com/twolittleducklings?igshid=8nwi38b8b0ld"><img class="photo3" src="img/ida14.jpg"> Instagram</a></td>
+      <a style="color: white; text-decoration: none; font-weight: bold;" href="https://instagram.com/twolittleducklings?igshid=8nwi38b8b0ld"><img class="photo3" src="instagram.png"> Instagram</a></td>
     </tr>
      <tr >
-      <td class="p2"><a style="color:  #C0C0C0; text-decoration: none; font-weight: bold;" href="https://twitter.com/kidsforpeace?lang=en"><img class="photo3" src="img/ida15.jpg">
+      <td class="p2"><a style="color: white; text-decoration: none; font-weight: bold;" href="https://twitter.com/kidsforpeace?lang=en"><img class="photo3" src="twitter1.png">
        Twitter</a></td>
     </tr>
      <tr >
-      <td class="p2" ><a style="color:  #C0C0C0; text-decoration: none; font-weight: bold;"  href="https://www.tumblr.com/tagged/coloring-pages-for-kids"><img class="photo3" src="img/ida16.png">
+      <td class="p2" ><a style="color: white; text-decoration: none; font-weight: bold;"  href="https://www.tumblr.com/tagged/coloring-pages-for-kids"><img class="photo3" src="tumblr.png">
        Tumblr</a></td>
     </tr>
     <tr><td></br>
@@ -314,7 +359,7 @@ function showSlides(n) {
 <table style="display: inline-block;">
   <tr>
     <td><div class="p1">About You</div>
-      <form action="demo_form.asp">
+      <form enctype='multipart/form-data' method='post'>
         <br>
         Name: <br>
         <input style="width:170px; background-color: pink;" type="text" name="fname" placeholder="First name" required><br>
