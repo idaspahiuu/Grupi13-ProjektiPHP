@@ -1,27 +1,29 @@
 <?php
-
-function myException($exception) {
-  echo "<b>Exception:</b> " . $exception->getMessage();
-}
-
-set_exception_handler('myException');
-
 if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['about']))
 {  
 	$teksti1 = trim($_POST['fname']) . " ";
-	$teksti2 = trim($_POST['lname']) . "\n";
-	$teksti3 = trim($_POST['about']) . "\n";
-	$filename = "Linda\info.txt"; 
+	$teksti2 = trim($_POST['lname']) . " ";
+	$teksti3 = trim($_POST['about']) . " ";
+	$filename = "info.txt"; 
 	$file = fopen($filename, "w" );
-	if($file == false )
-	{
-		throw new Exception( "Error in opening new file" );
-		exit();
+	try{
+		if($file == false){
+			echo "Error in opening new file";
+			throw new Exception();
+		}
+		else{
+			fwrite( $file, $teksti1);
+			fwrite( $file, $teksti2);
+			fwrite( $file, $teksti3);
+			fclose( $file );
+		}
 	}
-	fwrite( $file, $teksti1);
-	fwrite( $file, $teksti2);
-	fwrite( $file, $teksti3);
-	fclose( $file );
+	catch(Exception $ex){
+		echo "Ky eshte gabimi: ".$ex ."<br>";
+	}
+	finally{
+		
+	}
 }
 ?>
 <?php
@@ -102,8 +104,8 @@ body{
   <div class="dropdown">
   <button onclick="myFunction1()" class="dropbtn">&#9776;</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="php-sql\update.php">Change password</a>
-    <a href="php-sql\delete.php">Delete account</a>
+    <a href="update.php">Change password</a>
+    <a href="delete.php">Delete account</a>
     <a href="logout.php">Logout</a>
   </div>
 </div>
@@ -152,7 +154,7 @@ body{
 </div>
 <br>
 
-<div style="border:solid 3px #FAEBD7; border-radius: 4px; background-image: url('img/i.jpg');background-position: center;
+<div style="border:solid 3px #FAEBD7; border-radius: 4px; background-image: url('i.jpg');background-position: center;
   background-repeat: no-repeat;
   background-size: cover;">
 <table style="display: inline-block; float left; width:25%;">
@@ -173,7 +175,7 @@ body{
 
 </table>
 
-<table style="display: inline-block; width:35%;">
+<table style="display: inline-block; width:40%;">
   <tr>
     <th>Why is our page helpful</th>
     <tr >
@@ -197,7 +199,7 @@ body{
 <table style="display: inline-block; float right; column-span: 3;">
   <tr>
     <th>Reviews<br>
-      <img style="width:200px; height:100px;" src="img/1.png"></th>
+      <img style="width:200px; height:100px;" src="1.png"></th>
    <tr >
       <td >
         <div style="border:solid 1px; border-radius: 8px; padding: 10px">
@@ -230,7 +232,7 @@ No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
 <table style="display: inline-block;">
   <tr>
     <td>
-      <img style="width:150px;" src="img/123.png">
+      <img style="width:150px;" src="123.png">
     </td>
   </tr>
 </table>
@@ -299,19 +301,19 @@ function showSlides(n) {
   <tr>
     <th class="p1">You can also find us on</th>
     <tr >
-      <td class="p2"><a style="color:  white; text-decoration: none; font-weight: bold;" href="https://www.facebook.com/kidsacademyks/"><img class="photo3" src="img/facebook-logo.png" alt="Facebook"> Facebook</a>
+      <td class="p2"><a style="color:  white; text-decoration: none; font-weight: bold;" href="https://www.facebook.com/kidsacademyks/"><img class="photo3" src="facebook-logo.png" alt="Facebook"> Facebook</a>
       </td>
     </tr>
      <tr >
       <td class="p2">
-      <a style="color: white; text-decoration: none; font-weight: bold;" href="https://instagram.com/twolittleducklings?igshid=8nwi38b8b0ld"><img class="photo3" src="img/instagram.png"> Instagram</a></td>
+      <a style="color: white; text-decoration: none; font-weight: bold;" href="https://instagram.com/twolittleducklings?igshid=8nwi38b8b0ld"><img class="photo3" src="instagram.png"> Instagram</a></td>
     </tr>
      <tr >
-      <td class="p2"><a style="color: white; text-decoration: none; font-weight: bold;" href="https://twitter.com/kidsforpeace?lang=en"><img class="photo3" src="img/twitter1.png">
+      <td class="p2"><a style="color: white; text-decoration: none; font-weight: bold;" href="https://twitter.com/kidsforpeace?lang=en"><img class="photo3" src="twitter1.png">
        Twitter</a></td>
     </tr>
      <tr >
-      <td class="p2" ><a style="color: white; text-decoration: none; font-weight: bold;"  href="https://www.tumblr.com/tagged/coloring-pages-for-kids"><img class="photo3" src="img/tumblr.png">
+      <td class="p2" ><a style="color: white; text-decoration: none; font-weight: bold;"  href="https://www.tumblr.com/tagged/coloring-pages-for-kids"><img class="photo3" src="tumblr.png">
        Tumblr</a></td>
     </tr>
     <tr><td></br>
@@ -424,15 +426,15 @@ function getVote(int) {
 
 <script type="text/javascript">
 var currentTime = new Date().getHours();
-if (7 <= currentTime && currentTime < 22) {
+if (7 <= currentTime && currentTime < 20) {
     if (document.body) {
-        document.body.style.backgroundImage = "url('img/morningg.jpg')";
+        document.body.style.backgroundImage = "url('morningg.jpg')";
         
     }
 }
 else {
     if (document.body) {
-        document.body.style.backgroundImage = "url('img/night.jpg')";
+        document.body.style.backgroundImage = "url('night.jpg')";
     }
 }
 
