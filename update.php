@@ -1,4 +1,4 @@
-<?php include('db3.php'); ?>
+<?php include('php-sql\db3.php'); ?>
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="login.css" >
@@ -12,11 +12,11 @@
 		
 
 		<fieldset style="width:400px; background-color: #FFFFF0; opacity:0.9 ;border-width:1px; border-color: #483D8B; border-radius: 12px; margin-left:550px; margin-top: 200px;" > <legend style="color: white; font-family:Lucida Handwriting; text-shadow: 3px 2px #483D8B;"></legend>
-			<?php include('errors.php'); ?>
+			<?php include('php-sql\errors.php'); ?>
 			<h2 style="color:#483D8B;">Change password</h2>
 		<div class="input-icons">
 		
-		<i class="fa fa-envelope icon"></i> 
+		<i class="s"></i> 
 		<input class="input-field " type="email" name="email" placeholder="Email" id="email" value="<?php echo $email ?>"></br>
 
 		<i class="fa fa-key icon" aria-hidden="true"></i>
@@ -61,12 +61,12 @@
 var currentTime = new Date().getHours();
 if (7 <= currentTime && currentTime < 20) {
     if (document.body) {
-        document.body.style.backgroundImage = "url('images.jpg')";
+        document.body.style.backgroundImage = "url('img/images.jpg')";
     }
 }
 else {
     if (document.body) {
-        document.body.style.background = "url('images.jpg')";
+        document.body.style.background = "url('img/images.jpg')";
     }
 }
 

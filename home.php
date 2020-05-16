@@ -1,39 +1,9 @@
-<?php
 
-function myException($exception) {
-  echo "<b>Exception:</b> " . $exception->getMessage();
-}
-
-set_exception_handler('myException');
-
-if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['about']))
-{  
-	$teksti1 = trim($_POST['fname']) . " ";
-	$teksti2 = trim($_POST['lname']) . "\n";
-	$teksti3 = trim($_POST['about']) . "\n";
-	$filename = "Linda\info.txt"; 
-	$file = fopen($filename, "w" );
-	if($file == false )
-	{
-		throw new Exception( "Error in opening new file" );
-		exit();
-	}
-	fwrite( $file, $teksti1);
-	fwrite( $file, $teksti2);
-	fwrite( $file, $teksti3);
-	fclose( $file );
-}
-?>
-<?php
-
-session_start();
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Homepage</title>
+<title>Home</title>
 <link rel="stylesheet" type="text/css" href="main.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
@@ -89,23 +59,11 @@ body{
 <nav id="main">
   	<img class="logo"src="img/ida1.png">
 	<ul class="nav-links">
-		<li class="active">
-			<a  href="homepage.php">Home</a>
-		</li>
-		<li>
-			<a href="store.html">Store</a>
-		</li>
-		<li>
-			<a href="links.html">Video</a>
-		</li>
 	</ul> 
-  <div class="dropdown">
-  <button onclick="myFunction1()" class="dropbtn">&#9776;</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="php-sql\update.php">Change password</a>
-    <a href="php-sql\delete.php">Delete account</a>
-    <a href="logout.php">Logout</a>
-  </div>
+ 
+  <button><a style="text-decoration: none; color:purple;background-color:white;border: 1px groove transparent; border-radius: 5px; padding: 8px" href="Register.php" >Sign Up</a></button>
+  <button><a style="text-decoration: none; color:purple;background-color:white;border: 1px groove transparent; border-radius: 5px; padding: 8px" href="LogIn.php" style="text-decoration: none">Log In</a></button>
+ 
 </div>
 </nav>
 <p>
@@ -152,10 +110,10 @@ body{
 </div>
 <br>
 
-<div style="border:solid 3px #FAEBD7; border-radius: 4px; background-image: url('img/i.jpg');background-position: center;
+<div style="border:solid 3px #FAEBD7; border-radius: 4px; background-image: url('i.jpg');background-position: center;
   background-repeat: no-repeat;
   background-size: cover;">
-<table style="display: inline-block; float left; width:25%;">
+<table style="display: inline-block; float left; width:30%;">
   <tr>
     <th>About abcLearning</th>
     <tr >s
@@ -173,7 +131,7 @@ body{
 
 </table>
 
-<table style="display: inline-block; width:35%;">
+<table style="display: inline-block; width:50%;">
   <tr>
     <th>Why is our page helpful</th>
     <tr >
@@ -190,41 +148,8 @@ body{
      <tr >
       <td ><img class="photo1" src="img/ida10.jpg">
       Learn the objects with us! 
-    <a style="text-decoration: none; color:purple;background-color:#FFB6C1;border: 1px groove transparent; border-radius: 5px;" href="services.php"> View all of our services</a></td>
+    <a style="text-decoration: none; color:purple;background-color:#FFB6C1;border: 1px groove transparent; border-radius: 5px;" href="">Create account to use all of our services</a></td>
     </tr>
-
-</table>
-<table style="display: inline-block; float right; column-span: 3;">
-  <tr>
-    <th>Reviews<br>
-      <img style="width:200px; height:100px;" src="img/1.png"></th>
-   <tr >
-      <td >
-        <div style="border:solid 1px; border-radius: 8px; padding: 10px">
-        <div id="poll">
-<h3>Do you like our website?</h3>
-<form>
-Yes: <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
-No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
-</form>
-</div>
-</div>
-      </td>
-
-  <tr>
-    
-
-    <td><div style="border:1px #483D8B; font-weight: bold; border-radius: 10px;  background-color:#F0F8FF; padding:6px; color: #483D8B"><a  href="rate.php"><img style="width: 30px; height: 30px;" src="star2.png"></a>
-      <a style="text-decoration: none;href="rate.php">Check this and rate us!</a>
-    </div>
-    </td>
-    
-  </tr>
-
-</tr>
-<tr><td>&nbsp;</td></tr>
-    <tr><td>&nbsp;</td></tr>
-    <tr><td>&nbsp;</td></tr>
 
 </table>
 <table style="display: inline-block;">
@@ -269,7 +194,7 @@ function showSlides(n) {
 </body>
 <footer>
 
-  <table style="display: inline-block; width:25%; margin-bottom: 60px;">
+  <table style="display: inline-block; width:30%; margin-bottom: 60px;">
   <tr>
     <th class="p1">Details</th>
     <tr >
@@ -295,11 +220,11 @@ function showSlides(n) {
 
 
 
-<table style="display: inline-block; width:25%; margin-bottom: 20px;">
+<table style="display: inline-block; width:30%; margin-bottom: 20px;">
   <tr>
     <th class="p1">You can also find us on</th>
     <tr >
-      <td class="p2"><a style="color:  white; text-decoration: none; font-weight: bold;" href="https://www.facebook.com/kidsacademyks/"><img class="photo3" src="img/facebook-logo.png" alt="Facebook"> Facebook</a>
+      <td class="p2"><a style="color:  white; text-decoration: none; font-weight: bold;" href="https://www.facebook.com/kidsacademyks/"><img class="photo3" src="img\facebook-logo.png" alt="Facebook"> Facebook</a>
       </td>
     </tr>
      <tr >
@@ -311,7 +236,7 @@ function showSlides(n) {
        Twitter</a></td>
     </tr>
      <tr >
-      <td class="p2" ><a style="color: white; text-decoration: none; font-weight: bold;"  href="https://www.tumblr.com/tagged/coloring-pages-for-kids"><img class="photo3" src="img/tumblr.png">
+      <td class="p2" ><a style="color: white; text-decoration: none; font-weight: bold;"  href="https://www.tumblr.com/tagged/coloring-pages-for-kids"><img class="img/photo3" src="img/tumblr.png">
        Tumblr</a></td>
     </tr>
     <tr><td></br>
@@ -363,28 +288,6 @@ function showSlides(n) {
       </tr>
       
     </table>
-<table style="display: inline-block;">
-  <tr>
-    <td><div class="p1">About You</div>
-      <form enctype='multipart/form-data' method='post'>
-        <br>
-        Name: <br>
-        <input style="width:170px; background-color: pink;" type="text" name="fname" placeholder="First name" required><br>
-        Last Name: <br>
-        <input style="width:170px; background-color: pink;" type="text" name="lname" placeholder="Last name" required><br>
-        Write something about yourself:<br>
-         <input style="width:170px; height: 100px; background-color: pink;" type="text" name="about" placeholder="Write here" required><br>
-         <input style="width: 100px; float: right;" type="submit" value="Submit">
-
-
-      
-        <br>
-        
-      </form>
-    </td>
-  </tr>
-  
-</table>
 
 
 <script>

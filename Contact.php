@@ -161,12 +161,12 @@ input[type=submit]:hover {
 var currentTime = new Date().getHours();
 if (7 <= currentTime && currentTime < 20) {
     if (document.body) {
-        document.body.style.backgroundImage = "url('images.jpg')";
+        document.body.style.backgroundImage = "url('img/images.jpg')";
     }
 }
 else {
     if (document.body) {
-        document.body.style.background = "url('images.jpg')";
+        document.body.style.background = "url('img/images.jpg')";
     }
 }
 

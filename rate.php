@@ -128,12 +128,12 @@ input[type="submit"]
 
       for(var i=ab;i>=1;i--)
       {
-         document.getElementById(cname+i).src="star2.png";
+         document.getElementById(cname+i).src="img/star2.png";
       }
       var id=parseInt(ab)+1;
       for(var j=id;j<=5;j++)
       {
-         document.getElementById(cname+j).src="star1.png";
+         document.getElementById(cname+j).src="img/star1.png";
       }
    }
 
@@ -152,43 +152,43 @@ input[type="submit"]
   <div class="div">
 	  <p>Our services</p>
 	  <input type="hidden" id="php1_hidden" value="1">
-	  <img src="star1.png" onmouseover="change(this.id);" id="php1" class="php">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="php1" class="php">
 	  <input type="hidden" id="php2_hidden" value="2">
-	  <img src="star1.png" onmouseover="change(this.id);" id="php2" class="php">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="php2" class="php">
 	  <input type="hidden" id="php3_hidden" value="3">
-	  <img src="star1.png" onmouseover="change(this.id);" id="php3" class="php">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="php3" class="php">
 	  <input type="hidden" id="php4_hidden" value="4">
-	  <img src="star1.png" onmouseover="change(this.id);" id="php4" class="php">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="php4" class="php">
 	  <input type="hidden" id="php5_hidden" value="5">
-	  <img src="star1.png" onmouseover="change(this.id);" id="php5" class="php">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="php5" class="php">
 	</div>
 
 	<div class="div">
 	  <p>Our store</p>
 	  <input type="hidden" id="ph1_hidden" value="1">
-	  <img src="star1.png" onmouseover="change(this.id);" id="ph1" class="ph">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="ph1" class="ph">
 	  <input type="hidden" id="ph2_hidden" value="2">
-	  <img src="star1.png" onmouseover="change(this.id);" id="ph2" class="ph">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="ph2" class="ph">
 	  <input type="hidden" id="ph3_hidden" value="3">
-	  <img src="star1.png" onmouseover="change(this.id);" id="ph3" class="ph">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="ph3" class="ph">
 	  <input type="hidden" id="ph4_hidden" value="4">
-	  <img src="star1.png" onmouseover="change(this.id);" id="ph4" class="ph">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="ph4" class="ph">
 	  <input type="hidden" id="ph5_hidden" value="5">
-	  <img src="star1.png" onmouseover="change(this.id);" id="ph5" class="ph">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="ph5" class="ph">
 	</div>
 	
 	<div class="div">
 	  <p>Gaming</p>
 	  <input type="hidden" id="p1_hidden" value="1">
-	  <img src="star1.png" onmouseover="change(this.id);" id="p1" class="p">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="p1" class="p">
 	  <input type="hidden" id="p2_hidden" value="2">
-	  <img src="star1.png" onmouseover="change(this.id);" id="p2" class="p">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="p2" class="p">
 	  <input type="hidden" id="p3_hidden" value="3">
-	  <img src="star1.png" onmouseover="change(this.id);" id="p3" class="p">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="p3" class="p">
 	  <input type="hidden" id="p4_hidden" value="4">
-	  <img src="star1.png" onmouseover="change(this.id);" id="p4" class="p">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="p4" class="p">
 	  <input type="hidden" id="p5_hidden" value="5">
-	  <img src="star1.png" onmouseover="change(this.id);" id="p5" class="p">
+	  <img src="img/star1.png" onmouseover="change(this.id);" id="p5" class="p">
 	</div>
 
 	  <input type="hidden" name="phprating" id="phprating" value="0">

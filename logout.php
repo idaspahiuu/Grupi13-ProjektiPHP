@@ -1,8 +1,12 @@
 <?php 
 session_start();
-$loggedin_user = $_SESSION['valid_user'];
-unset($_SESSION['valid_user']);
+$loggedin_user = $_SESSION['email'];
+unset($_SESSION['email']);
 session_destroy();
+$cookie_name = 'bgColor';
+unset($_COOKIE[$cookie_name]);
+// empty value and expiration one hour before
+$res = setcookie($cookie_name, '', time() - 3600);
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +17,7 @@ session_destroy();
 </head>
 <body>
 	<p>
-        <a style="text-decoration: none;text-shadow: 3px; color: #483D8B ; font-weight: bold;" href="LogIn.php"><i class="fa fa-arrow-circle-left" style="font-size:24px; color:#483D8B; text-shadow: 3px;"></i> LogIn</a>
+        <a style="text-decoration: none;text-shadow: 3px; color: #483D8B ; font-weight: bold;" href="home.php"><i class="fa fa-arrow-circle-left" style="font-size:24px; color:#483D8B; text-shadow: 3px;"></i> Go back</a>
     
     </p>
 
@@ -64,4 +68,12 @@ else {
 }
 
 </script>
+<?php
+// remove all session variables
+session_unset();
+
+// destroy the session
+session_destroy();
+?>
+
 </html>

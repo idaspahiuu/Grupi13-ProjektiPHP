@@ -1,4 +1,4 @@
-<?php include('db1.php'); ?>
+<?php include('php-sql\db1.php'); ?>
 <!DOCTYPE html>
 <html>
 <style type="text/css">
@@ -21,8 +21,8 @@
 	<form method="post" action="LogIn.php">
 		
 
-		<fieldset style="width:400px; background-image: url(signup.jpg); opacity:0.9 ;border-width:1px; border-color: #483D8B; border-radius: 12px; margin:15%;" > <legend style="color: white; font-family:Lucida Handwriting; text-shadow: 3px 2px #483D8B;"><h2>Log In</h2></legend>
-			<?php include('errors.php'); ?>
+		<fieldset style="width:400px; background-image: url(img/signup.jpg); opacity:0.9 ;border-width:1px; border-color: #483D8B; border-radius: 12px; margin:15%;" > <legend style="color: white; font-family:Lucida Handwriting; text-shadow: 3px 2px #483D8B;"><h2>Log In</h2></legend>
+			<?php include('php-sql\errors.php'); ?>
 		<div class="input-icons">
 		
 		<i class="fa fa-envelope icon"></i> 
@@ -32,6 +32,7 @@
 		<input class="input-field " type="password" name="Password" id="Password" placeholder="Password"></br>
 
 	</div>
+		<p><input type="checkbox" name="remember"/>Remember me</p>
 		<button type="submit" id="register" name="register" style=" font-weight: bolder;">Log In</button></br></br>
 		<a style="border:1px #483D8B; font-weight: bold; border-radius: 10px; text-decoration: none; background-color:#F0F8FF; padding:6px; color: #483D8B" href="Register.php"> Sign Up </a> &nbsp;<span style="color:#D3D3D3"> if you don't have an account.</span>
 
@@ -40,7 +41,7 @@
 </td>
 <td></td>
 <td></td>
-<td><img src="welcome.png" style="padding:200px; align-content: left"></img></td>
+<td><img src="img\welcome.png" style="padding:200px; align-content: left"></img></td>
 	</tr>
 	</table >
 
@@ -67,12 +68,12 @@
 var currentTime = new Date().getHours();
 if (7 <= currentTime && currentTime < 20) {
     if (document.body) {
-        document.body.style.backgroundImage = "url('images.jpg')";
+        document.body.style.backgroundImage = "url('img/images.jpg')";
     }
 }
 else {
     if (document.body) {
-        document.body.style.background = "url('images.jpg')";
+        document.body.style.background = "url('img/images.jpg')";
     }
 }
 
