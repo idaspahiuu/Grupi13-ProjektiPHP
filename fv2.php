@@ -1,4 +1,5 @@
 <?php
+include("background.php");
 include("fv.php");
 
 include("avocado.html");

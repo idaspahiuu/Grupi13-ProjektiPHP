@@ -2,19 +2,28 @@
 if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['about']))
 {  
 	$teksti1 = trim($_POST['fname']) . " ";
-	$teksti2 = trim($_POST['lname']) . "\n";
-	$teksti3 = trim($_POST['about']) . "\n";
-	$filename = "Linda\info.txt"; 
+	$teksti2 = trim($_POST['lname']) . " ";
+	$teksti3 = trim($_POST['about']) . " ";
+	$filename = "info.txt"; 
 	$file = fopen($filename, "w" );
-	if($file == false )
-	{
-		print( "Error in opening new file" );
-		exit();
+	try{
+		if($file == false){
+			echo "Error in opening new file";
+			throw new Exception();
+		}
+		else{
+			fwrite( $file, $teksti1);
+			fwrite( $file, $teksti2);
+			fwrite( $file, $teksti3);
+			fclose( $file );
+		}
 	}
-	fwrite( $file, $teksti1);
-	fwrite( $file, $teksti2);
-	fwrite( $file, $teksti3);
-	fclose( $file );
+	catch(Exception $ex){
+		echo "Ky eshte gabimi: ".$ex ."<br>";
+	}
+	finally{
+		
+	}
 }
 ?>
 <?php
@@ -183,7 +192,7 @@ body{
      <tr >
       <td ><img class="photo1" src="img/ida10.jpg">
       Learn the objects with us! 
-    <a style="text-decoration: none; color:purple;background-color:#FFB6C1;border: 1px groove transparent; border-radius: 5px;" href="services.html"> View all of our services</a></td>
+    <a style="text-decoration: none; color:purple;background-color:#FFB6C1;border: 1px groove transparent; border-radius: 5px;" href="services.php"> View all of our services</a></td>
     </tr>
 
 </table>
