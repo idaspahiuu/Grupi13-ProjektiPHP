@@ -154,7 +154,7 @@ body{
 </div>
 <br>
 
-<div style="border:solid 3px #FAEBD7; border-radius: 4px; background-image: url('i.jpg');background-position: center;
+<div style="border:solid 3px #FAEBD7; border-radius: 4px; background-image: url('img/i.jpg');background-position: center;
   background-repeat: no-repeat;
   background-size: cover;">
 <table style="display: inline-block; float left; width:25%;">
@@ -175,7 +175,7 @@ body{
 
 </table>
 
-<table style="display: inline-block; width:40%;">
+<table style="display: inline-block; width:35%;">
   <tr>
     <th>Why is our page helpful</th>
     <tr >
@@ -199,7 +199,7 @@ body{
 <table style="display: inline-block; float right; column-span: 3;">
   <tr>
     <th>Reviews<br>
-      <img style="width:200px; height:100px;" src="1.png"></th>
+      <img style="width:200px; height:100px;" src="img/1.png"></th>
    <tr >
       <td >
         <div style="border:solid 1px; border-radius: 8px; padding: 10px">
@@ -216,7 +216,7 @@ No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
   <tr>
     
 
-    <td><div style="border:1px #483D8B; font-weight: bold; border-radius: 10px;  background-color:#F0F8FF; padding:6px; color: #483D8B"><a  href="rate.php"><img style="width: 30px; height: 30px;" src="star2.png"></a>
+    <td><div style="border:1px #483D8B; font-weight: bold; border-radius: 10px;  background-color:#F0F8FF; padding:6px; color: #483D8B"><a  href="rate.php"><img style="width: 30px; height: 30px;" src="img/star2.png"></a>
       <a style="text-decoration: none;href="rate.php">Check this and rate us!</a>
     </div>
     </td>
@@ -232,7 +232,7 @@ No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
 <table style="display: inline-block;">
   <tr>
     <td>
-      <img style="width:150px;" src="123.png">
+      <img style="width:150px;" src="img/123.png">
     </td>
   </tr>
 </table>
@@ -301,19 +301,19 @@ function showSlides(n) {
   <tr>
     <th class="p1">You can also find us on</th>
     <tr >
-      <td class="p2"><a style="color:  white; text-decoration: none; font-weight: bold;" href="https://www.facebook.com/kidsacademyks/"><img class="photo3" src="facebook-logo.png" alt="Facebook"> Facebook</a>
+      <td class="p2"><a style="color:  white; text-decoration: none; font-weight: bold;" href="https://www.facebook.com/kidsacademyks/"><img class="photo3" src="img/facebook-logo.png" alt="Facebook"> Facebook</a>
       </td>
     </tr>
      <tr >
       <td class="p2">
-      <a style="color: white; text-decoration: none; font-weight: bold;" href="https://instagram.com/twolittleducklings?igshid=8nwi38b8b0ld"><img class="photo3" src="instagram.png"> Instagram</a></td>
+      <a style="color: white; text-decoration: none; font-weight: bold;" href="https://instagram.com/twolittleducklings?igshid=8nwi38b8b0ld"><img class="photo3" src="img/instagram.png"> Instagram</a></td>
     </tr>
      <tr >
-      <td class="p2"><a style="color: white; text-decoration: none; font-weight: bold;" href="https://twitter.com/kidsforpeace?lang=en"><img class="photo3" src="twitter1.png">
+      <td class="p2"><a style="color: white; text-decoration: none; font-weight: bold;" href="https://twitter.com/kidsforpeace?lang=en"><img class="photo3" src="img/twitter1.png">
        Twitter</a></td>
     </tr>
      <tr >
-      <td class="p2" ><a style="color: white; text-decoration: none; font-weight: bold;"  href="https://www.tumblr.com/tagged/coloring-pages-for-kids"><img class="photo3" src="tumblr.png">
+      <td class="p2" ><a style="color: white; text-decoration: none; font-weight: bold;"  href="https://www.tumblr.com/tagged/coloring-pages-for-kids"><img class="photo3" src="img/tumblr.png">
        Tumblr</a></td>
     </tr>
     <tr><td></br>

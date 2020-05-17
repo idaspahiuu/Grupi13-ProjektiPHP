@@ -1,13 +1,11 @@
-<!DOCTYPE html>
+<?php
+include("background.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Alphabet</title>
 	<style>
-		body
-		{
-			background-color: #8B008B;
-		}
 		h2
 		{
 			font-family: lucida handwriting;
@@ -68,9 +66,7 @@
 
 	</style>
 </head>
-<body>
-	<div>
-<img class="logo" src="img/ida1.png">
+<body bgcolor="<?php echo $bgColor ?>"><div>
 	<h2>Alphabet</h2>
 	<br>
 <table cellpadding="10px">
@@ -270,26 +266,6 @@
 		<td>"Z" is for Zebra!</td>
 	</tr>
 </table>
-
-
-
-
 </div>
 </body>
-
-</script>
-<script type="text/javascript">
-var currentTime = new Date().getHours();
-if (7 <= currentTime && currentTime < 20) {
-    if (document.body) {
-        document.body.style.backgroundImage = "url('morningg.jpg')";
-    }
-}
-else {
-    if (document.body) {
-        document.body.style.background = "url('night.jpg')";
-    }
-}
-
-</script>
 </html>

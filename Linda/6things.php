@@ -1,11 +1,11 @@
+<?php
+include("background.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>6 Things you should definitely do for your child</title>
 	<style>
-		body{
-			background-color: #8B008B;
-		}
 		h2{
 			font-family: lucida handwriting;
 			color: #FAEBD7;
@@ -39,7 +39,7 @@
 	</style>
 </head>
 
-<body><div>
+<body bgcolor="<?php echo $bgColor ?>"><div><div>
 	<img class="logo"src="img/ida1.png">
 	<h2>6 Things you should definitely do for your child</h2>
 	<p><h2> Kisses and hugs </h2></p>
@@ -76,21 +76,6 @@ So, always encourage and help them foster friendships with other great kids.
 
 
 </p>
-	</div>
+</div>
 </body>
-<script type="text/javascript">
-var currentTime = new Date().getHours();
-if (7 <= currentTime && currentTime < 20) {
-    if (document.body) {
-        document.body.style.backgroundImage = "url('morning.jpg')";
-    }
-}
-else {
-    if (document.body) {
-        document.body.style.background = "url('night.jpg')";
-    }
-}
-
-</script>
 </html>
-

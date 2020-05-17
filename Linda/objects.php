@@ -1,13 +1,11 @@
-<!DOCTYPE html>
+<?php
+include("background.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Objects</title>
 	<style >
-		body
-		{
-			background-color: #8B008B;
-		}
 		h2
 		{
 			font-family: lucida handwriting;
@@ -96,9 +94,7 @@
 }
 	</style>
 </head>
-<body>
-	<div>
-		<img class="logo" src="img/ida1.png">
+<body bgcolor="<?php echo $bgColor ?>"><div>
 		<h2>Objects and Shapes</h2><br>
 		<p style="font-size: 16px; padding-left: 20px; color:pink;">Click on top of images for full view!</p>
 
@@ -184,26 +180,6 @@
   </div></div></td>
 	</tr>
 </table>
-
-
-
-
-	</div>
-<script type="text/javascript">
-var currentTime = new Date().getHours();
-if (7 <= currentTime && currentTime < 22) {
-    if (document.body) {
-        document.body.style.backgroundImage = "url('img/morningg.jpg')";
-    }
-}
-else {
-    if (document.body) {
-        document.body.style.background = "url('img/night.jpg')";
-    }
-}
-
-</script>
-
-
+</div>
 </body>
 </html>
