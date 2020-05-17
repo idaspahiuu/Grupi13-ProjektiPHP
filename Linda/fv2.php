@@ -1,10 +1,9 @@
 <?php
-include("background.php");
 include("fv.php");
 
 include("avocado.html");
 $avocado = new fv();
-$avocado->__set("lloji", "vegetable");
+$avocado->__set("lloji", "fruit");
 $avocado->__set("emri", "avocado");
 $avocado->__set("ngjyra", "green");
 echo $avocado->__get("lloji").$avocado->__get("emri").$avocado->__get("ngjyra")."<br>";

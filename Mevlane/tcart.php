@@ -1,4 +1,6 @@
 <?php
+require("dbconfig.php");
+
 $connect = mysqli_connect(servername, username, password, dbname); 
 if (!$connect) {  
    die("Konektimi deshtoi: " . mysqli_connect_error()); 

@@ -1,14 +1,9 @@
-<?php 
-		session_start();
-
+<?php
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
 <style type="text/css">
-	body{
-		background-color: #D8BFD8;
-	}
-
 	h2{
 			font-family: lucida handwriting;
 			color: #FAEBD7;
@@ -58,9 +53,6 @@
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-	<img class="logo"src="ida1.png">
-	<a style="float:right; margin-top:20px;margin-left: 20px;  text-decoration: none;text-shadow: 3px; color: white ; font-weight: bold;" href="Linda/numbers.php"><i class="fa fa-arrow-circle-left" style="font-size:24px; color:white; text-shadow: 3px;"></i> Go back</a>
 	<div>
 <?php
 
@@ -133,9 +125,9 @@ foreach ($num as $value) {
 
 
 				echo "<p style='margin-left:10px;'>Your favorite color is "."<font color =".$_SESSION['col'].">".$_SESSION['col']."</font></p>";
-				echo "<p style='margin-left:10px;'>Your favorite animal is ".$_SESSION['anim']."&nbsp;"."&nbsp;"."<img width='100px' height='100px' src='Linda/animals/".$_SESSION['anim'].".jpg'></p>";
-				echo "<p style='margin-left:10px;'>Your favorite fruit is ".$_SESSION['fr']."&nbsp;"."&nbsp;"."<img width='100px' height='100px' src='Linda/fv/".$_SESSION['fr'].".jpg'> </p>";
-				echo "<p style='margin-left:10px;'>Your favorite vegetable is ".$_SESSION['veg']."&nbsp;"."&nbsp;"."<img width='100px' height='100px' src='Linda/fv/".$_SESSION['veg'].".jpg'> </p>";
+				echo "<p style='margin-left:10px;'>Your favorite animal is ".$_SESSION['anim']."&nbsp;"."&nbsp;"."<img width='100px' height='100px' src='animals/".$_SESSION['anim'].".jpg'></p>";
+				echo "<p style='margin-left:10px;'>Your favorite fruit is ".$_SESSION['fr']."&nbsp;"."&nbsp;"."<img width='100px' height='100px' src='fv/".$_SESSION['fr'].".jpg'> </p>";
+				echo "<p style='margin-left:10px;'>Your favorite vegetable is ".$_SESSION['veg']."&nbsp;"."&nbsp;"."<img width='100px' height='100px' src='fv/".$_SESSION['veg'].".jpg'> </p>";
 
 			}
 

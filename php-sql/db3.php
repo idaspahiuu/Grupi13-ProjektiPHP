@@ -78,13 +78,13 @@ $Password1= stripcslashes($Password1);
 				if (mysqli_query($conn, $sql))
 				{	
 					echo "Password updated successfully!<br>";
-					echo '<a href="LogIn.php">Go back to LogIn</a>';
+					echo '<a href="homepage.php">Go back</a>';
 				}	
 			}
 			else
 			{
 				trigger_error("Failed to update password!".'<br>');
-				echo '<a href="LogIn.php">Go back</a>';
+				echo '<a href="homepage.php">Go back</a>';
 			}
 		}
 	}

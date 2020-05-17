@@ -17,7 +17,7 @@ $res = setcookie($cookie_name, '', time() - 3600);
 </head>
 <body>
 	<p>
-        <a style="text-decoration: none;text-shadow: 3px; color: #483D8B ; font-weight: bold;" href="home.php"><i class="fa fa-arrow-circle-left" style="font-size:24px; color:#483D8B; text-shadow: 3px;"></i> Go back</a>
+        <a style="text-decoration: none;text-shadow: 3px; color: #483D8B ; font-weight: bold;" href="index.php"><i class="fa fa-arrow-circle-left" style="font-size:24px; color:#483D8B; text-shadow: 3px;"></i> Go back</a>
     
     </p>
 
@@ -68,12 +68,5 @@ else {
 }
 
 </script>
-<?php
-// remove all session variables
-session_unset();
-
-// destroy the session
-session_destroy();
-?>
 
 </html>

@@ -1,15 +1,20 @@
-<?php
-include("background.php");
-?>
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Numbers</title>
 	<style>
+	body
+		{
+		  height: 100%;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
 		h2
 		{
 			font-family: lucida handwriting;
-			color: plum;
+			color: pulm;
 			text-align: center;
         }
         div
@@ -62,12 +67,16 @@ include("background.php");
 			background-color: darkorchid;
 		}
 	</style>
-	
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<a style="float:right; margin-top:20px;margin-left: 20px;  text-decoration: none;text-shadow: 3px; color: white ; font-weight: bold;" href="homepage.php"><i class="fa fa-arrow-circle-left" style="font-size:24px; color:white; text-shadow: 3px;"></i> Go back</a>
 </head>
-<body bgcolor="<?php echo $bgColor ?>">
+<body>
 	<a style="text-decoration: none; float: right; margin-right: 120px; margin-top: 50px; border: 1px solid plum; border-radius: 5px; background-color: white; padding: 5px;" href="array.php">Let's have some fun</a>
 	<div>
+	<img class="logo" src="img/ida1.png">
 		<h2>Numbers</h2>
+
 <table>
 	<tr>
 		<td><a target="_blank" href="numbers/1.jpg">
@@ -107,4 +116,18 @@ include("background.php");
 
 </div>
 </body>
+<script type="text/javascript">
+var currentTime = new Date().getHours();
+if (7 <= currentTime && currentTime < 22) {
+    if (document.body) {
+        document.body.style.backgroundImage = "url('img/morningg.jpg')";
+    }
+}
+else {
+    if (document.body) {
+        document.body.style.background = "url('img/night.jpg')";
+    }
+}
+
+</script>
 </html>

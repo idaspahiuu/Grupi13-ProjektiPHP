@@ -5,6 +5,8 @@ $Password="";
 $Password1="";
 $error = array();
 
+
+
 $conn=mysqli_connect("localhost", "root", "", "users");
 if(!$conn)
 {

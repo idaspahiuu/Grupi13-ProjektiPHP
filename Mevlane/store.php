@@ -69,7 +69,13 @@ if(isset($_GET["action"]))
         box-sizing: border-box;
     }
 	  body {
-        background-color: #8B008B;
+        
+		  background-color: #8B008B;
+		  height: 100%;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+			
     }
 	 nav {
         border-bottom: 2px groove #FAEBD7;
@@ -171,11 +177,11 @@ if(isset($_GET["action"]))
 }
 	</style>
 	<body>
-	<nav id="main">
-            <img class="logo" src="mevla.jpg">
+	<nav id="main" style="background-color: orchid ">
+            <img class="logo" src="img/ida1.png">
             <ul class="nav-links">
                 <li>
-                    <a href="homepage.html">Home</a>
+                    <a href="homepage.php">Home</a>
                 </li>
                 <li>
                     <a class="active" href="store.html">Store</a>
@@ -191,10 +197,10 @@ if(isset($_GET["action"]))
 			    <h2 style = "color : blanchedalmond">Now you can buy our products online</h2>
 				<br/>
 				<?php 
-               include "logini.php";
-               include "lform.php";
-			   include "rform.php";
-			   include"register.php";
+               include "Mevlane/logini.php";
+               include "Mevlane/lform.php";
+			   include "Mevlane/rform.php";
+			   include"Mevlane/register.php";
                 ?>
 				
 		<div class="container">
@@ -217,7 +223,7 @@ if(isset($_GET["action"]))
 				<form method="post" action="store.php?action = add & id=<?php echo $row["id"]; ?>">
 					<div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
 						
-						<img src="images/<?php echo $row["item_image"]; ?>" class="img-responsive"/><br/>
+						<img width="100px" height="100px" src="<?php echo $row["item_image"]; ?>.jpg" class="img-responsive"/><br/>
 
 						<h4 class="text-info"><?php echo $row["item_name"]; ?></h4>
 
@@ -241,7 +247,7 @@ if(isset($_GET["action"]))
 			<div style="clear:both"></div>
 			<br />
 			<div class="table-responsive">
-				<table class="table table-bordered">
+				<table class="table table-bordered" >
 					<?php
 					if(!empty($_SESSION["shopping_cart"]))
 					{
@@ -252,7 +258,7 @@ if(isset($_GET["action"]))
 					<tr>
 						<td><?php echo $values["item_name"]; ?></td>
 						<td><?php echo $values["item_quantity"]; ?></td>
-						<td><?php echo $values["item_image"]; ?></td>
+						<td><?php echo "<img src=' ".$values["item_image"].".jpg' >"; ?></td>
 						<td><?php echo $values["item_price"]; ?></td>
 						<td><?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
 						<td><a href="store.php?action = delete & id=<?php echo $values["item_id"]; ?>"><span class = "text-danger">REMOVE</span></a></td>
@@ -291,6 +297,21 @@ if(isset($_GET["action"]))
             document.body.background = "https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
         }
     }
+</script>
+<script type="text/javascript">
+var currentTime = new Date().getHours();
+if (7 <= currentTime && currentTime < 20) {
+    if (document.body) {
+        document.body.style.backgroundImage = "url('morningg.jpg')";
+        
+    }
+}
+else {
+    if (document.body) {
+        document.body.style.backgroundImage = "url('morningg.jpg')";
+    }
+}
+
 </script>
 </html>
 <?php

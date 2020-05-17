@@ -110,7 +110,7 @@ body{
 </div>
 <br>
 
-<div style="border:solid 3px #FAEBD7; border-radius: 4px; background-image: url('i.jpg');background-position: center;
+<div style="border:solid 3px #FAEBD7; border-radius: 4px; background-image: url('img/i.jpg');background-position: center;
   background-repeat: no-repeat;
   background-size: cover;">
 <table style="display: inline-block; float left; width:30%;">
@@ -234,10 +234,6 @@ function showSlides(n) {
      <tr >
       <td class="p2"><a style="color: white; text-decoration: none; font-weight: bold;" href="https://twitter.com/kidsforpeace?lang=en"><img class="photo3" src="img/twitter1.png">
        Twitter</a></td>
-    </tr>
-     <tr >
-      <td class="p2" ><a style="color: white; text-decoration: none; font-weight: bold;"  href="https://www.tumblr.com/tagged/coloring-pages-for-kids"><img class="img/photo3" src="img/tumblr.png">
-       Tumblr</a></td>
     </tr>
     <tr><td></br>
     	</br>

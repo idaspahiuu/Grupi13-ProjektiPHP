@@ -90,7 +90,7 @@
 {
 	if ($_POST['restart'] === "New Game") {
 		session_destroy();	
-		header("Location: hangman.php");
+		header("Location: index.php");
 	}}
 ?>
 <div class="form-style-6">

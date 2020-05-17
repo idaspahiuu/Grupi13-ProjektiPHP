@@ -7,14 +7,16 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> Tic Tac Toe</title>
+		   
+		<title> Tic Tac Toe</title>
     </head>
     <body>
+	<img style="margin-left: -20px;" src="tictac.png">
+		<br>     	
 	<body style="background-color: lightblue;font-size: 30px;">
         <!-- Inline HTML css to prevent selection of text -->
         <div style="-moz-user-select: none; -webkit-user-select:none; -ms-user-select:none; user-select:none; -moz-user-drag:none; -webkit-user-drag:none; -ms-user-drag:none; user-drag: none;" unselectable="on">
-		<div style="position: absolute; top: 250px; left: 480px; font-family: sans-serif;">
-            <p> Tic Tac Toe game.</p>
+		<div style="position: absolute; top: 250px; left: 480px; font-family: sans-serif;">   
 			
             <?php
             // Initialize PHP Tick Tac Toe Game Engine

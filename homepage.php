@@ -95,12 +95,13 @@ body{
 			<a  href="homepage.php">Home</a>
 		</li>
 		<li>
-			<a href="store.html">Store</a>
+			<a href="store.php">Store</a>
 		</li>
 		<li>
-			<a href="links.html">Video</a>
+			<a href="gaming.php">Game</a>
 		</li>
 	</ul> 
+
   <div class="dropdown">
   <button onclick="myFunction1()" class="dropbtn">&#9776;</button>
   <div id="myDropdown" class="dropdown-content">
@@ -283,7 +284,8 @@ function showSlides(n) {
     <tr >
       <td class="p2"> Hours of service<br>
             Monday-Friday:8am-6pm<br>
-            Saturday:10am-4pm</td>
+            Saturday:10am-4pm<br>
+            <a style="text-decoration: none;" href="Contact.php">Contact Us</a></td>
     </tr>
     <tr><td></br>
     	</br>
@@ -428,13 +430,13 @@ function getVote(int) {
 var currentTime = new Date().getHours();
 if (7 <= currentTime && currentTime < 20) {
     if (document.body) {
-        document.body.style.backgroundImage = "url('morningg.jpg')";
+        document.body.style.backgroundImage = "url('img/morningg.jpg')";
         
     }
 }
 else {
     if (document.body) {
-        document.body.style.backgroundImage = "url('night.jpg')";
+        document.body.style.backgroundImage = "url('img/night.jpg')";
     }
 }
 

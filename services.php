@@ -103,7 +103,7 @@
 				  
 		<tr id="main">
         	<td align="center"> 
-			<img class="photo" src="img/foods1.jpg"></td><td><strong><a href="Linda/$Top5HealthiestFood.php">Top 5 healthiest foods</a></strong><br>
+			<img class="photo" src="img/foods1.jpg"></td><td><strong><a href="Linda/Top5HealthiestFood.php">Top 5 healthiest foods</a></strong><br>
 				An important factor for good health is eating the right things to the right extent.<br>
 				That is why it is important to live and eat healthy.
 	   </td></tr>
@@ -117,7 +117,7 @@
 
    <tr id="main">
 	<td align="center"> 
-	<img class="photo" src="img/children.jpg"></td><td><strong><a href="6things.php">6 things you should definitely do for your child</a></strong><br>
+	<img class="photo" src="img/children.jpg"></td><td><strong><a href="Linda/6things.php">6 things you should definitely do for your child</a></strong><br>
 		Parents, never forget that you are the "World" for your child. They need your love ,<br>
 	    care and most of all your time. Here are 8 things to do for them, 8 things to say "everything" to them.
 </td></tr>
@@ -126,16 +126,35 @@
 
 </div>
 </body>
+<footer>
+	<table align="right" width="80%" cellspacing="10px">
+		<tr>
+			<div class="link">
+			<td ><a style="text-decoration: none; padding: 10px; color: white;" href="#">ABOUT</a></td>
+			<td><a style="text-decoration: none; padding: 10px; color: white;" href="#">HELP</a></td>
+			<td><a style="text-decoration: none; padding: 10px; color: white;" href="#">PRIVACY</a></td>
+			<td><a style="text-decoration: none; padding: 10px; color: white;" href="#">LOCATIONS</a></td>
+			<td><a style="text-decoration: none; padding: 10px; color: white;" href="#">LANGUAGE</a></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td color="#DCDCDC">&#9400; ABCLearn 2020</td>
+
+		</tr>
+	</table>
+</footer>
+
 <script type="text/javascript">
 var currentTime = new Date().getHours();
 if (7 <= currentTime && currentTime < 20) {
     if (document.body) {
-        document.body.style.backgroundImage = "url('morningg.jpg')";
+        document.body.style.backgroundImage = "url('img/morningg.jpg')";
     }
 }
 else {
     if (document.body) {
-        document.body.style.background = "url('night.jpg')";
+        document.body.style.background = "url('img/night.jpg')";
     }
 }
 

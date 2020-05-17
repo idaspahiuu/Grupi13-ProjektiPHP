@@ -40,7 +40,6 @@ include("background.php");
 </head>
 
 <body bgcolor="<?php echo $bgColor ?>"><div><div>
-	<img class="logo"src="img/ida1.png">
 	<h2>6 Things you should definitely do for your child</h2>
 	<p><h2> Kisses and hugs </h2></p>
 <p>

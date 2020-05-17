@@ -53,13 +53,13 @@ if(isset($_POST['Delete']))
 				{	
 					echo "Account deleted successfully!<br>";
 					echo "We hope you will come back again :)";
-					echo '<a href="https://www.google.com/">Leave this page</a>';
+					echo '<a href="index.php">Leave this page</a>';
 				}	
 			}
 			else
 			{
 				echo "Failed to delete account!<br>";
-				echo '<a href="LogIn.php">Go back</a>';
+				echo '<a href="homepage.php">Go back</a>';
 			}
 		}
 		else{

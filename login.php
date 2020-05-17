@@ -32,7 +32,6 @@
 		<input class="input-field " type="password" name="Password" id="Password" placeholder="Password"></br>
 
 	</div>
-		<p><input type="checkbox" name="remember"/>Remember me</p>
 		<button type="submit" id="register" name="register" style=" font-weight: bolder;">Log In</button></br></br>
 		<a style="border:1px #483D8B; font-weight: bold; border-radius: 10px; text-decoration: none; background-color:#F0F8FF; padding:6px; color: #483D8B" href="Register.php"> Sign Up </a> &nbsp;<span style="color:#D3D3D3"> if you don't have an account.</span>
 

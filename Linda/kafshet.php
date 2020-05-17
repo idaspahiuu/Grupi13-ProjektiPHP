@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animals</title>
+</head>
+<body>
+
+</body>
+</html>
 <?php
 include("animals.php");
 

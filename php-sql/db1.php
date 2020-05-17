@@ -65,7 +65,7 @@ $password = stripcslashes($password);
     }
     else
     {
-   		throw new Exception("Wrong email or password!");
+   		throw new Exception("Wrong email or password! <a href='LogIn.php'>Go back to Log In</a>");
     }
 }
 
